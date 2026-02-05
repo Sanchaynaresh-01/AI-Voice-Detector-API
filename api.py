@@ -13,6 +13,15 @@ MODEL_PATH = "models/ai_voice_detector.pkl"
 # Load model ONCE
 model = joblib.load(MODEL_PATH)
 
+@app.get("/")
+def home():
+    return {
+        "message": "AI Voice Detection API is live",
+        "docs": "/docs",
+        "endpoint": "/predict"
+    }
+
+
 @app.post("/predict")
 async def predict(
     file: UploadFile = File(...),
@@ -48,3 +57,4 @@ async def predict(
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
