@@ -1,5 +1,5 @@
 # 🎙️ AI-Generated Voice Detection (Multi-Language)
-
+>> Note : This project has issues since the model has gone overfitting, so will be updated in some days
 🚀 **India AI Impact Buildathon – GUVI x HCL**
 
 ---
